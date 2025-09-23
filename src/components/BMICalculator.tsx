@@ -39,7 +39,7 @@ const BMICalculator = () => {
   };
 
   return (
-    <form className="text-blue-900 bg-white flex flex-col gap-6 rounded-2xl mx-auto p-6 shadow-1">
+    <section className="text-blue-900 bg-white flex flex-col gap-6 rounded-2xl mx-auto p-6 shadow-1">
       <h2 className="text-preset-4">Enter your details below</h2>
       <UnitsRadio unit={unit} setUnit={setUnit} />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -98,7 +98,7 @@ const BMICalculator = () => {
         )}
       </div>
       <Result bodyMass={bodyMass} impBodyMass={impBodyMass} unit={unit} />
-    </form>
+    </section>
   );
 };
 export default BMICalculator;

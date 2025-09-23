@@ -35,7 +35,7 @@ const limitationsInfo = [
 
 const Limitation = () => {
   return (
-    <div className="px-6 xl:px-0 ">
+    <footer className="px-6 xl:px-0 ">
       <div className="text-center mb-14 xl:hidden">
         <h2 className="text-preset-2-3 mb-8">Limitations of BMI</h2>
         <p className="text-preset-6-reg text-grey-500">
@@ -65,7 +65,7 @@ const Limitation = () => {
           />
         ))}
       </div>
-    </div>
+    </footer>
   );
 };
 export default Limitation;

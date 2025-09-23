@@ -44,8 +44,8 @@ const Result = ({ bodyMass, impBodyMass, unit }: ResultProps) => {
 
   const idealWeightCal = () => {
     if (unit === "metric") {
-      const minResult = 18.4 * ((height / 100) ^ 2);
-      const maxResult = 24 * ((height / 100) ^ 2);
+      const minResult = 18.4 * (height / 100) ** 2;
+      const maxResult = 24 * (height / 100) ** 2;
 
       setIdealWeight({
         min: minResult,

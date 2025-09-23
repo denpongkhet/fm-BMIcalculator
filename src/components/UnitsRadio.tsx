@@ -11,9 +11,13 @@ const UnitsRadio = ({ unit, setUnit }: UnitsRadioProps) => {
   return (
     <fieldset className="flex items-center gap-8">
       <legend className="sr-only">Select your unit </legend>
-      <label className="flex items-center gap-4 has-[:focus-visible]:outline has-[:focus-visible]:outline-blue-500">
+      <label
+        htmlFor="metricUnit"
+        className="flex items-center gap-4 has-[:focus-visible]:outline has-[:focus-visible]:outline-blue-500"
+      >
         <input
           type="radio"
+          id="metricUnit"
           name="unit"
           value={"metric"}
           checked={unit === "metric"}
@@ -26,9 +30,13 @@ const UnitsRadio = ({ unit, setUnit }: UnitsRadioProps) => {
         <span className="text-preset-6-reg font-semibold">Metric</span>
       </label>
 
-      <label className="flex items-center gap-4 mx-auto has-[:focus-visible]:outline has-[:focus-visible]:outline-blue-500">
+      <label
+        htmlFor="imperialUnit"
+        className="flex items-center gap-4 mx-auto has-[:focus-visible]:outline has-[:focus-visible]:outline-blue-500"
+      >
         <input
           type="radio"
+          id="imperialUnit"
           name="unit"
           value={"imperial"}
           checked={unit === "imperial"}

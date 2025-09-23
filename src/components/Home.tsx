@@ -8,7 +8,7 @@ const Home = () => {
     <div className="relative">
       <div className="bg-my-gradient w-full h-[70vh] absolute top-0 left-0 -z-10 rounded-b-[2.1875rem] md:h-[45vh] xl:w-3/4 xl:h-[26%] " />
       <div className="flex flex-col gap-24 md:py-8 xl:px-36 xl:py-22">
-        <div className="flex flex-col items-center justify-center px-6  gap-8 md:gap-10 xl:items-start ">
+        <main className="flex flex-col items-center justify-center px-6  gap-8 md:gap-10 xl:items-start ">
           <img src="/images/logo.svg" alt="logo" className="w-9" />
           <div className="grid grid-cols-1 place-items-start gap-8 md:gap-10 xl:grid-cols-2">
             <div className=" text-center xl:text-start">
@@ -24,7 +24,7 @@ const Home = () => {
             </div>
             <BMICalculator />
           </div>
-        </div>
+        </main>
         <BMIResult />
         <Tips />
         <Limitation />
