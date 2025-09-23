@@ -12,7 +12,7 @@ const UnitsRadio = ({ unit, setUnit }: UnitsRadioProps) => {
     <fieldset className="flex items-center gap-8">
       <legend className="sr-only">Select your unit </legend>
       <label
-        htmlFor="metricUnit"
+       
         className="flex items-center gap-4 has-[:focus-visible]:outline has-[:focus-visible]:outline-blue-500"
       >
         <input
@@ -31,7 +31,7 @@ const UnitsRadio = ({ unit, setUnit }: UnitsRadioProps) => {
       </label>
 
       <label
-        htmlFor="imperialUnit"
+        
         className="flex items-center gap-4 mx-auto has-[:focus-visible]:outline has-[:focus-visible]:outline-blue-500"
       >
         <input

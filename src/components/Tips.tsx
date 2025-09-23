@@ -1,7 +1,7 @@
 const Tips = () => {
   return (
     <section className="flex flex-col bg-my-gradient-2 xl:scale-x-115 xl:rounded-4xl xl:flex-row px-6 gap-10 md:px-10 py-12">
-      <article className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10 xl:flex-col xl:items-start">
+      <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10 xl:flex-col xl:items-start">
         <img
           src="/images/icon-eating.svg"
           alt="food icon"
@@ -14,8 +14,8 @@ const Tips = () => {
             digestion, immunity, mental clarity, and mood.
           </p>
         </div>
-      </article>
-      <article className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10  xl:flex-col xl:items-start ">
+      </div>
+      <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10  xl:flex-col xl:items-start ">
         <img
           src="/images/icon-exercise.svg"
           alt="food icon"
@@ -28,8 +28,8 @@ const Tips = () => {
             reduces disease risk, fostering wellness and longevity.
           </p>
         </div>
-      </article>
-      <article className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10  xl:flex-col xl:items-start">
+      </div>
+      <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10  xl:flex-col xl:items-start">
         <img
           src="/images/icon-sleep.svg"
           alt="food icon"
@@ -42,7 +42,7 @@ const Tips = () => {
             wellness, promoting overall restoration and rejuvenation.
           </p>
         </div>
-      </article>
+      </div>
     </section>
   );
 };

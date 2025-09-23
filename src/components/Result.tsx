@@ -63,15 +63,29 @@ const Result = ({ bodyMass, impBodyMass, unit }: ResultProps) => {
     }
   };
 
+  const hasInput =
+    (unit === "metric" && weight > 0 && height > 0) ||
+    (unit === "imperial" &&
+      (weightSt > 0 || weightLbs > 0) &&
+      (heightFt > 0 || heightIn > 0));
+
   useEffect(() => {
     bmiCal();
     idealWeightCal();
-  }, [bodyMass, impBodyMass]);
+    console.log(bmi === 0);
+  }, [weight, height, weightSt, weightLbs, heightFt, heightIn]);
 
   return (
-    <div className="p-8 bg-blue-500 rounded-2xl md:rounded-l-r-full text-white">
-      {bmi === 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="p-8 bg-blue-500 rounded-2xl md:max-w-195 md:rounded-l-r-full text-white">
+      {!hasInput ? (
+        <>
+          <h3 className="text-preset-6 font-semibold mb-2">Welcome!</h3>
+          <p className="text-preset-7-reg mt-6">
+            Enter your height and weight and you'll see your BMI result here
+          </p>
+        </>
+      ) : (
+        <div className="grid grid-cols-1  md:grid-cols-2">
           <div>
             <h3 className="text-preset-6 font-semibold mb-2">Your BMI is...</h3>
             <span className="text-preset-1-2">{bmi.toFixed(1)}</span>
@@ -87,13 +101,6 @@ const Result = ({ bodyMass, impBodyMass, unit }: ResultProps) => {
             </span>
           </p>
         </div>
-      ) : (
-        <>
-          <h3 className="text-preset-6 font-semibold mb-2">Welcome!</h3>
-          <p className="text-preset-7-reg mt-6">
-            Enter your height and weight and you'll see your BMI result here
-          </p>
-        </>
       )}
     </div>
   );
